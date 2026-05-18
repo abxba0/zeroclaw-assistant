@@ -1,0 +1,53 @@
+
+---
+
+# 📄 2. `requirements.txt`
+
+```text
+# Python dependencies for AI Assistant
+# Python 3.11+ required
+#
+# Install with: pip install --require-hashes -r requirements.txt
+# Regenerate with: pip-compile --generate-hashes requirements.in
+#
+# NOTE: Version numbers below are reasonable defaults at time of writing.
+# Before first install, run `pip-compile` or `pip list --outdated` to confirm
+# you're on current stable versions. Update CHANGELOG.md on any bump.
+
+# ---- Web framework + WSGI server ----
+Flask==3.0.3
+gunicorn==23.0.0
+
+# ---- HTTP client + retries ----
+requests==2.32.3
+tenacity==9.0.0
+urllib3==2.2.3
+
+# ---- Scheduling + time handling ----
+APScheduler==3.10.4
+python-dateutil==2.9.0.post0
+tzdata==2024.2
+
+# ---- Google Calendar ----
+google-auth==2.35.0
+google-auth-oauthlib==1.2.1
+google-auth-httplib2==0.2.0
+google-api-python-client==2.149.0
+
+# ---- Notion ----
+notion-client==2.2.1
+
+# ---- Email (high-priority alerts only) ----
+resend==2.4.0
+
+# ---- Structured logging ----
+structlog==24.4.0
+
+# ---- Validation ----
+pydantic==2.9.2
+
+# ---- Development / testing (optional, install separately) ----
+# pytest==8.3.3
+# pytest-cov==5.0.0
+# ruff==0.6.9
+# mypy==1.11.2
